@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="name" content="Editorial Singular">
+    <meta name="description" content="Inicio">
+    <title>Editorial Singular</title>
+    <link rel="icon" href="Icono_editorial.png">
+    <link rel="stylesheet" href="estilos_css_inicio.css">
+</head>
+<body>  
+ 
+    <!--CABECERA-->
+    <header>
+        <!--MENÚ CABECERA-->
+        <nav>
+            <a href="inicio_sara.html"><img src="Logo_editorial_nombre_sin_fondo.png" alt="Logo Editorial Singular sin fondo" width="131.8px" height="50px"></a>
+
+                <ul>
+                    <li><h4>Inicio</h4></li>
+                    <li><a href="editorial_sara.html">Editorial</a></li>
+                    <li><a href="servicios_sara.html">Servicios integrales de impresión</a></li>
+                    <li><a href="contactos_sara.html">Contacto</a></li>
+                </ul>
+
+            <!-- MENU DESPLEGABLE EN MOVIL -->
+            <div class="desplegable">
+                <p>Menú</p>
+                <div class="desplegable-contenido">
+                    <p>Inicio</p>
+                    <p><a href="editorial_sara.html">Editorial</a></p>
+                    <p><a href="servicios_sara.html">Servicios integrales de impresión</a></p>
+                    <p><a href="contactos_sara.html">Contacto</a></p>
+                </div>
+            </div>
+            
+            
+        </nav>
+    </header>
+  
+    <!--CONTENIDO PRINCIPAL-->
+   <main>
+<!-- Banner introduccion-->
+    <section class="intro">
+        <div class="intro_izq">
+            <p>¿Estás escribiendo en este momento y quieres valorar la obra en la que estas trabajando?
+            ¿Tiene cualidades para que la publiques cuando termines?
+            ¿Ya tienes tu libro acabado? 
+            ¿Tu sueño es publicarlo?
+            </p>
+            <h3>Podemos ayudarte a lograr tu objetivo.</h3>
+
+            
+            <a class="btn_contacto1" href="contactos_sara.html"><span>¡Cuéntanos! </span></a>
+            
+          </div>
+        <div class="intro_dcha">
+            <img src="Logo_editorial_nombre_sin_fondo.png" alt="Logo Editorial Singular sin fondo" width="184.52px"; height="70px" ;>
+            <p>se creó en enero de 2023 ante la necesidad de muchos escritores, nobeles o no, que desean publicar su obra teniendo todo el control sobre su desarrollo.</p>
+        </div>
+    </section>
+<!-- Banner autopublicacion-->
+    <section class="autopublicacion">
+         
+        <div class="autopub_dcha">
+            <h2>Autopublicación</h2>
+            <p>La publicación de libros implica la producción de obras escritas, accesibles al público y nosotros te ayudamos a conseguirlo.
+            Nuestra experiencia en las artes gráficas pueden orientarte en la toma de decisiones sobre la publicación y así alcanzar facilmente tu sueño.</p>
+            <p>Además, con nosotros los derechos son íntegramente del autor.</p>
+
+            <a class="btn_editorial" href="editorial_sara.html"><span>Podemos ayudarte  </span></a>
+        </div>
+        <div class="autopub_izq">
+            <img src="foto_autopublicacion.jpg" alt="Libros apilados" height="400px">
+        </div>
+      </section>
+<!-- Banner publicaciones-->
+
+<section class="publicaciones">
+    <h2 style="padding: 5px 20px;">Publicaciones</h2>
+
+    <div class="carrusel">
+ 
+        <div class="contenedorLibros">
+            <img src="202303_Tapa_Siembra.jpg" alt="Tapa Siembra de Versos" id="Siembra">
+            <img src="202306_Tapa_Grietas.jpg" alt="Tapa Grietas" id="Grietas">
+            <img src="202308_Tapa_Angeles.jpg" alt="Tapa El mundo mágico de los ángeles" id="Angeles">
+            <img src="202308_Tapa_Arlanda.jpg" alt="Tapa Arlanda" id="Arlanda">
+            <img src="202309_Tapa_Baston_ebano.jpg" alt="Tapa de Bastón de Ébano" id="Baston">
+            <img src="202310_Tapa_Urna.jpg" alt="Tapa de La Urna" id="Urna">
+            <img src="202312_Tapa_Chile.jpg" alt="Tapa Cuentos de Chile" id="Chile">
+        </div>
+
+        <div class="btns_carrusel">
+            <button id="anteri" onclick="anterior()"> << </button>
+            <button id="btnPausa" onclick="pausar()"> Pausar </button>
+            <button id="siguient" onclick="siguiente()"> >> </button>
+        </div>
+    </div>
+
+    <!-- SCRIPT DEL CARRUSEL DE LIBROS-->
+    <script>
+        // creamos una lista con nuestras imagenes/
+        let libros = [ 
+            document.getElementById("Siembra"),
+            document.getElementById("Grietas"),
+            document.getElementById("Angeles"),
+            document.getElementById("Arlanda"),
+            document.getElementById("Baston"),
+            document.getElementById("Urna"),
+            document.getElementById("Chile"),
+        ];
+        let btnPausa= document.getElementById("btnPausa");
+      
+        //El carrusel empieza en 0/
+        let imagenActual = 0; 
+
+        const VELOCIDAD = 2500;
+
+        let pausa= false;
+
+
+
+        // ocultamos el resto de las imagenes/
+        libros[1].style.display = "none";
+        libros[2].style.display = "none";
+        libros[3].style.display = "none";
+        libros[4].style.display = "none";
+        libros[5].style.display = "none";
+        libros[6].style.display = "none";
+       
+       //Creamos una funcion para pausar con el boton//
+       function pausar() {
+        if (pausa === false) {
+            pausa = true;
+            btnPausa.innerHTML = "Reproducir";
+        }
+        else { 
+            pausa = false;
+            btnPausa.innerHTML = "Pausar";
+        }
+       }
+
+        //Creamos un contador bucle/
+        function autoSiguiente() {
+            if (pausa === false){
+                siguiente ();
+            }           
+            setTimeout (autoSiguiente,VELOCIDAD);
+        }
+        function siguiente() {
+            libros[imagenActual].style.display="none";
+
+            if (imagenActual === 6) {
+                imagenActual = 0;
+            } 
+            else {
+            imagenActual += 1; 
+            }
+           
+            libros[imagenActual].style.display="inline-block";
+        }
+
+        function anterior() {
+            libros[imagenActual].style.display="none";
+            
+            if (imagenActual === 0) {
+                imagenActual = 6;        
+            } 
+            else {
+            imagenActual -= 1; 
+            }
+           
+            libros[imagenActual].style.display="inline-block";
+
+            libros[imagenActual+=1].style.traslateX="-100px";
+        }
+        
+        setTimeout (autoSiguiente,VELOCIDAD);
+    </script>
+
+  
+      
+    
+    
+  </div>
+    
+      
+          
+    </section>
+<!-- Banner Singular-->
+<section class="Singular">
+
+  <div class="Singular_izq">
+
+    <div class="historiaSingular">
+        <p>  <img src="Logo_editorial_nombre_sin_fondo.png" alt="Logo Editorial Singular sin fondo" width="131.8px"; height="50px" ;> pertenece a <img src="Logo_Singular marca_registrada.png" alt="Logo Singualr Artes Gráficas" width="130px"; height="30px" ;> una empresa ubicada cerca de Zaragoza y dedicada, desde hace más de 6 años al diseño e impresión en todo tipo de soporte. Creada y gestionada por Sara Loriente, a lo largo de estos años se han unido a su sueño un gran grupo de colaboradores en todas las areas de las artes gráficas.</p>
+    </div>
+
+    <div class="historia_Sara">
+        <!--<p>Sara es impresora y, en septiembre de 2017, decidió abrir su propio taller de artes gráficas en La Puebla de Alfindén, de donde es su familia. Lo más importante para Sara es la atención al público y la formalidad a la hora de entregar los trabajos. Además, Sara asesora y da confianza a sus clientes.</p>-->
+        <p><img src="foto_singular_Sara.png" alt="foto retrato de Sara" width="200px" height="200px">
+        Sara es impresora y, en septiembre de 2017, decidió abrir su propio taller de artes gráficas en La Puebla de Alfindén, de donde es su familia. Lo más importante para Sara es la atención al público y la formalidad a la hora de entregar los trabajos. Además, Sara asesora y da confianza a sus clientes.</p>
+    </div>
+  </div>
+
+   
+</section>
+</main>
+
+<!--PIE DE PÁGINA-->
+    <footer>
+        <div class="footer_arriba">
+            <div class="copyright">
+                <p>&copy; <img src="Logo_Singular marca_registrada.png" alt="Logo Singular Artes Graficas" width="130px"; height="30px" ;>, 2023</p>
+            </div>
+    
+            <div class="direcciones_correo">
+                <p>editorial.singularartesgraficas@gmail.com</p> 
+                <p>singular.artesgraficas@gmail.com</p>
+            </div>
+        </div>
+        <div class="direccion">
+            <p>C/ Fernando Moliné, 74  ·   50171 La Puebla de Alfindén (Zaragoza)   ·  <b>646 61 93 95</b></p>
+        </div>
+
+    </footer>
+</body>
+</html>
