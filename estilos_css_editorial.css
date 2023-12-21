@@ -1,0 +1,305 @@
+body{
+    margin: 0;
+    padding: 0;
+
+   
+
+    /***BIBLIOTECA DE VARIABLES***/
+    --color_marron_os: rgb(62, 53, 46);
+    --color_marron_tierra: rgb(176, 146, 112);
+    --color_marron_claro: rgb(218, 198, 171);
+    --color_marron_blanco: rgb(255, 251, 246);
+    --color_gris_azul: rgb(73, 78, 82);
+    --color_azul_claro: rgb(247, 247, 247);
+    --color_gris_claro: rgb(218, 198, 171);
+    --color_negro: rgb(51, 51, 51);
+
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 1.2em;
+}
+
+
+
+/* #region MENU CABECERA */
+header {
+    width: 100%;
+    height: 12vh;
+    background: white;
+    box-shadow: 4px 4px 4px 0px rgba(62, 53, 46, 0.2);
+    padding: 1% 40px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 1%;
+   
+}
+
+nav ul {
+    display: flex;
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0px 50px 0px 0px;
+   
+}
+
+nav h4 {
+    color: var(--color_marron_tierra);
+    padding: 0px 20px 0px 0px;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;    
+    color: var(--color_negro);
+    padding: 0px 20px 0px 0px;
+}  
+
+nav a:hover {
+   text-shadow: 2px 2px 4px var(--color_marron_tierra);
+} 
+
+nav img:hover {
+    transform: scale(105%);
+}
+.desplegable {
+    display: none;
+    padding-right: 50px;
+    align-items: right;
+   
+}
+.desplegable-contenido {
+    display: none;
+    text-align: right;
+    background-color: var(--color_marron_os);
+    color: var(--color_marron_blanco);
+    box-shadow: 2px 2px 4px var(--color_marron_os);
+    padding: 5px;
+    position: absolute;
+    right: 80px;
+}
+
+.desplegable-contenido a {
+
+    color: var(--color_marron_blanco);
+    padding: 0%;
+    
+}
+.desplegable:hover .desplegable-contenido {
+    display: inline-block;
+}
+/* #endregion */
+
+/* #region CUERPO */
+main {   
+   width: 100%;
+   min-height: 50vh;   
+}
+/* #endregion */
+
+/* #region BANNER ASESORAMIENTO */
+
+.asesoramiento {
+    display: flex;
+    margin-top: 12vh;
+    background-color: var(--color_azul_claro);
+}
+
+.asesor_izq {
+    color: var(--color_gris_azul);
+    padding: 0% 4%;
+    text-align: left;
+}
+.asesor_izq h1 {
+    color: var(--color_gris_azul);
+    font-size: 2em;
+    padding: 5% 0%;
+}
+.asesor_dcha {
+    width: 50%;
+
+
+}
+.btn_contacto2 {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--color_gris_azul);
+    box-shadow: 2px 2px 4px var(--color_negro);
+    color: var(--color_azul_claro);
+    padding: 10px 25px;
+    border-radius: 5px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn_contacto2 span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn_contacto2 span::after {
+    content: ">>";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    transition: 0.5s;
+}
+  
+.btn_contacto2:hover span {
+    padding-right: 35px;
+   
+}
+
+.btn_contacto2:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/* #endregion */
+
+/* #region BANNER CORRECCIÓN **/
+.correccion {
+    background-image: url(fondo_correccion2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;  
+}
+.correccion h2{
+    color: var(--color_marron_claro)
+}
+.correccion p {
+    color:var(--color_marron_blanco)
+}
+.correc_arriba{
+    padding: 0% 30%;
+    text-align: left;
+}
+.correc_abajo{
+    padding: 0% 32%;
+    text-align: right;
+}
+
+
+/* #endregion */
+
+/* #region BANNER MAQUETACION **/
+.maquetacion {
+    background-color: var(--color_marron_blanco) ;
+    display: flex;
+    align-items: center;
+   
+}
+.maquetacion img{
+    padding: 5%;
+}
+.maqueta_texto {
+    width: 70%;
+    padding: 2% 5%;
+}
+.maqueta_arriba {
+    text-align: right;
+}
+.maqueta_abajo {
+    text-align: left;
+}
+/* #endregion */
+/* #region BANNER IMPRESIÓN */
+.impresion {
+    
+    background-image: url(foto_publicacion.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+   
+    color: var(--color_azul_claro);
+    display: flex;
+    position: relative;
+   
+ 
+ 
+}
+
+.impresion_texto{
+    width:70%;
+    background-image: url(fondo_publicacion.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size:fill;
+    padding: 3%;
+    z-index: 2;
+}
+.impresion h1 {
+
+    font-size: 2em;
+    padding: 3% 5%;
+}
+.impresion p {
+
+   padding: 0% 5%;
+}
+.impresion h3 {
+    text-align: center;
+}
+
+   
+    
+
+       
+
+
+/* #endregion */
+/* #region CAMBIOS PARA MOVIL */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 1em;
+
+    }
+    nav ul {
+        display: none;
+    }
+    .desplegable {
+        display: inline-block;
+    }
+    .correccion_arriba{
+       padding:0; 
+    }
+    .correccion_abajo{
+        padding: 0; 
+     }
+    }
+
+/* #endregion */
+/* #region PIE DE PÁGINA **/
+footer {
+    margin:0;
+    padding:0% 2%; 
+    background-color: #ffffff;
+    color: #333333;
+    box-shadow: -4px -4px 4px 0px rgba(62, 53, 46, 0.2);
+}
+.footer_arriba{
+    display: flex;
+    justify-content:space-around;
+}
+
+.direccion{
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.direcciones_correo{
+    text-align: center;
+}
+
+/* #endregion */
