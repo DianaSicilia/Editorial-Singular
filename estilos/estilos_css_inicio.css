@@ -109,7 +109,7 @@ main {
 .intro {
     display: flex;
     margin-top: 10vh;
-    background-image: url(fondo_inicio.svg);
+    background-image: url(../imagenes/fondo_inicio.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -171,7 +171,7 @@ main {
 /* #region BANNER AUTOPUBLICACIÓN **/
 .autopublicacion {
   
-    background-image: url(degradado_autopublicación.svg);
+    background-image: url(../imagenes/degradado_autopublicacion.svg);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: cover;  
@@ -268,7 +268,7 @@ main {
     width: 100%;   
     display: flex;
     background-color: var(--color_marron_blanco);
-    background-image: url(fondo_singular_tienda.jpg);
+    background-image: url(../imagenes/fondo_singular_tienda.jpg);
     background-repeat: no-repeat;
     background-position: right;
     background-size: cover;
@@ -277,7 +277,7 @@ main {
 
 
 .Singular_izq {
-    background-image: url(fondo_singular.svg);
+    background-image: url(../imagenes/fondo_singular.svg);
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;

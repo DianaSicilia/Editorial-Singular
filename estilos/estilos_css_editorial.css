@@ -168,7 +168,7 @@ main {
 
 /* #region BANNER CORRECCIÓN **/
 .correccion {
-    background-image: url(fondo_correccion2.svg);
+    background-image: url(../imagenes/fondo_correccion2.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -216,7 +216,7 @@ main {
 /* #region BANNER IMPRESIÓN */
 .impresion {
     
-    background-image: url(foto_publicacion.png);
+    background-image: url(../imagenes/foto_publicacion.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -232,7 +232,7 @@ main {
 
 .impresion_texto{
     width:70%;
-    background-image: url(fondo_publicacion.svg);
+    background-image: url(../imagenes/fondo_publicacion.svg);
     background-repeat: no-repeat;
     background-position: left;
     background-size:fill;
