@@ -83,7 +83,7 @@ nav img:hover {
     box-shadow: 2px 2px 4px var(--color_marron_os);
     padding: 5px;
     position: absolute;
-    right: 15px;
+    right: 80px;
 }
 
 .desplegable-contenido a {
