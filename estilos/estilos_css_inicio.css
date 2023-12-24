@@ -26,7 +26,7 @@ header {
     height: 12vh;
     background: white;
     box-shadow: 4px 4px 4px 0px rgba(62, 53, 46, 0.2);
-    padding: 1% 40px;
+    
     position: fixed;
     top: 0;
     z-index: 10;
@@ -37,7 +37,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 1% 1%;
+    margin: 1% 2%;
    
 }
 
@@ -46,13 +46,13 @@ nav ul {
     text-align: center;
     list-style: none;
     margin: 0;
-    padding: 0px 50px 0px 0px;
-   
+    padding: 0;  
 }
 
 nav h4 {
     color: var(--color_marron_tierra);
-    padding: 0px 20px 0px 0px;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
     margin: 0;
 }
 
@@ -310,14 +310,30 @@ main {
     .desplegable {
         display: inline-block;
     }
+    .intro {
+        background: none;
+    }
+    .intro_dcha{
+        background-color: var(--color_marron_blanco);
+    }
+    .intro_izq {
+        background-color: var(--color_marron_os);
+        padding: 5%;
+    }
     .autopub_dcha {
         padding: 10%;
+    }
+    .autopub_izq {
+        display: none;
     }
     .Singular {
         background-image: none;
     }
     .Singular_izq {
         max-width: 100%;
+    }
+    .footer_arriba {
+        display: initial
     }
 }
 /* #endregion */
@@ -333,6 +349,9 @@ footer {
     display: flex;
     justify-content:space-around;
 }
+.footer_arriba img {
+    padding-top: 2%;
+}
 
 .direccion{
     text-align: center;
@@ -341,5 +360,12 @@ footer {
 
 .direcciones_correo{
     text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .footer_arriba {
+        display: initial;
+        text-align: center;
+    }
 }
 /* #endregion */
