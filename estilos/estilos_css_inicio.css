@@ -83,13 +83,13 @@ nav img:hover {
     box-shadow: 2px 2px 4px var(--color_marron_os);
     padding: 5px;
     position: absolute;
-    right: 80px;
+    right: 30px;
 }
 
 .desplegable-contenido a {
 
     color: var(--color_marron_blanco);
-    padding: 0%;
+    padding: 1%;
     
 }
 .desplegable:hover .desplegable-contenido {
